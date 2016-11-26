@@ -1,8 +1,8 @@
-//this version of led bar graph only uses three leds
-
 //this one works fine
 
 //do not use resistors on LEDs with thislED >= 5 
+
+//note pin 7 not used, too crowded
 
 
 const int analogPin = A0; // pin connects to potentiometer
