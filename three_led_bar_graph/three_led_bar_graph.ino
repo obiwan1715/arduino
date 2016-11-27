@@ -2,10 +2,12 @@
 
 //this one works fine
 
+//do not use resistors on LEDs with thislED >= 5 
+
 
 const int analogPin = A0; // pin connects to potentiometer
-const int ledCount = 3; //number of LEDs
-int ledPins[] = {2,3,4}; //pins connected to LEDs
+const int ledCount = 9; //number of LEDs
+int ledPins[] = {2,3,4,5,6,8,9,10,11}; //pins connected to LEDs
 
 
 void setup() {
