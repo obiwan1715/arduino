@@ -4,6 +4,7 @@
  maybe its as simple as putting (wait) in brackets
  or maybe I never commented out the int wait
  find a way to use for to set up the notes array at the beginning
+ add lines to turn each tone off and get silence before the next one
  */
  
 int buzzer = 8;
