@@ -1,9 +1,8 @@
 /* plays a series of ascending then descending notes on a piezo buzzer
  I could't get this to work using this syntax
  tone(buzzer, notes[thisNote], wait);
- maybe its as simple as putting (wait) in brackets
- or maybe I commented out the int wait
- find a way to use for to set up the notes array at the beginning
+ doesn't work with wait as an int or as a unsigned long - in each case it just produces a series of faint clicks as if its only playing each note for 1ms
+ find a way to use 'for' to set up the notes array at the beginning
  */
  
 int buzzer = 8;

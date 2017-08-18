@@ -4,7 +4,7 @@
 
 Servo myservo;  // create servo object to control a servo
 
-int pos = 90;    // variable to store the servo position at roght angles to servo body
+int pos = 90;    // variable to store the servo position at right angles to servo body
 int creep = 200; // adjust this var to change the speed of sweep
 
 void setup() {
