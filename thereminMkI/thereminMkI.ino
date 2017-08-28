@@ -6,14 +6,13 @@
 
 // constants
 const int sensorPin = A0;    // pin that the sensor is attached to
-const int ledPin = 13;       // attach the led directly to board via pin 13 and GND
 const int soundOut = 9;      // sets pin 9 for output to buzzer
 
 // variables
 int sensorValue = 0;         // initial value for the sensor value
 int sensorMin = 1023;        // initial value for the minimum sensor value
 int sensorMax = 0;           // initial value for the maximum sensor value
-int octave = 1000;           // change this value according to how high-pitched you want it to be
+int octave = 4000;           // change this value according to how high-pitched you want it to be
 
 void setup() {  
   
@@ -34,15 +33,12 @@ void setup() {
 
 void loop() {
 
- digitalWrite(ledPin, HIGH); // light the LED to show calibration is over
+ sensorValue = analogRead(sensorPin); // start reading from A0 again
  
- int lightIn = analogRead(sensorPin); // start reading from A0 again
- 
- int pitch = map(lightIn, sensorMin, sensorMax, 0, octave); //change reading from A0 to a value between 0 (silent) and the octave setting defined earlier
+ int pitch = map(sensorValue, sensorMin, sensorMax, 50, octave); //change reading from A0 to a value between 0 (silent) and the octave setting defined earlier
  
  tone(soundOut,pitch,20); //send tone to pin 9, play pitch, duration 20 (can change duration to change sound effect)
  
  delay(10); //pause 10ms then start again
  
 }
-
