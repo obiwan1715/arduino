@@ -1,6 +1,8 @@
 /* this works
  *  returns cm vales depending on distance from object
  *  could use this for basic obstacle sensing robot
+ *  if so set max distance to be the distance you want the bot to start reacting
+ *  test with led first then include motors
  */
 
 #include <NewPing.h>
