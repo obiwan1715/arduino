@@ -1,4 +1,4 @@
-/* this works with external LED on ledPin
+/* variant using sonar.ping_median to make the results more stable
  *  triggers at MAX_DISTANCE or closer
  */
 
@@ -19,9 +19,10 @@ void setup() {
  
 void loop() {
   delay(50);
-  distance = sonar.ping_cm();
+  sonar.ping_median(5);
+  distance =  sonar.convert_cm(sonar.ping_median(5));
   Serial.print("Ping: ");
-  Serial.print(sonar.ping_cm());
+  Serial.print(distance);
   Serial.println("cm");
   if (distance > 0) {
     digitalWrite(ledPin, HIGH);
